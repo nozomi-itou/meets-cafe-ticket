@@ -13,7 +13,7 @@
 | first_name_kana    | string     | null: false                    |
 | birthday           | date       | null: false                    |
 | gender_id          | integer    | null: false                    |
-| post_code_id       | string     | null: false                    |
+| post_code          | string     | null: false                    |
 | area_id            | integer    | null: false                    |
 | city               | string     | null: false                    |
 | address            | string     | null: false                    |
@@ -38,7 +38,7 @@
 | last_name_kana     | string  | null: false               |
 | first_name_kana    | string  | null: false               |
 | birthday           | date    | null: false               |
-| post_code_id       | string  | null: false               |
+| post_code          | string  | null: false               |
 | area_id            | integer | null: false               |
 | city               | string  | null: false               |
 | address            | string  | null: false               |
@@ -62,7 +62,7 @@
 | category_id | integer    | null: false                    |
 | area_id     | integer    | null: false                    |
 | owner       | references | null: false, foreign_key: true |
-| review      | references |                                |
+| review      | references | foreign_key: true              |
 
 ### Association
 - has_one :owner
