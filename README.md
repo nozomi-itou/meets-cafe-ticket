@@ -13,7 +13,6 @@
 | first_name_kana    | string     | null: false                    |
 | birthday           | date       | null: false                    |
 | gender_id          | integer    | null: false                    |
-| post_code          | string     | null: false                    |
 | area_id            | integer    | null: false                    |
 | city               | string     | null: false                    |
 | address            | string     | null: false                    |
@@ -46,8 +45,7 @@
 | phone_number       | string  | null: false               |
 
 ### Association
-- has_one :shop
-
+- has_many :shops
 
 
 ## shops テーブル
@@ -65,7 +63,7 @@
 | review      | references | foreign_key: true              |
 
 ### Association
-- has_one :owner
+- belong_to :owner
 - has_many :reviews
 
 
@@ -92,4 +90,4 @@
 | user          | references | null: false, foreign_key: true |
 
 ### Association
-- has_one :user
+- belong_to :user
