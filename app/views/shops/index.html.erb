@@ -6,7 +6,11 @@
         </div>
         <p id="main-copy">月額500円でカフェ巡りをしよう</p>
         <div id="fixed-button">
-          <a href="./signup/index.html"><p id="pcb">会員登録は<br>こちら >></p><p id="spb">登録は<br>こちら</p></a>
+        <%if user_signed_in?%>
+          <a href="./user./signup/index.html"><p id="pcb">Ticketは<br>こちら >></p><p id="spb">登録は<br>こちら</p></a>
+        <%else%>
+          <p id="pcb"><%= link_to " 会員登録は☕️"" こちら >>", my_page_path, class: "ticket" %></p>
+        <%end%>
         </div>
       </section>
       <!-----ファーストビューここまで----->

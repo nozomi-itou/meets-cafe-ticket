@@ -4,8 +4,21 @@
           <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
         </div>
         <div id="login">
-          <p><a href="./signup/index.html">新規入会</a></p>
-          <p><a href="./login/index.html">ログイン</a></p>
+          <% if user_signed_in? %>
+            <p><%= link_to "マイページ", my_page_path, class: "ticket" %></p>
+            <p><%= link_to ' ログアウト ', destroy_user_session_path, method: :delete, class: "logout" %></p>
+          <% else %>
+            <p><%= link_to '新規入会', new_user_registration_path, class: "sign-up" %></p>
+            <p><%= link_to 'ログイン', new_user_session_path, class: "login" %></p>
+            <p><%= link_to 'Merchant', new_owner_registration_path, class: "sign-up" %></p>
+          <% end %>
+
+            
+
+
+          
+
+
 
           <p id="menu">メニュー</p>
           <!-- 開閉ボタン -->
