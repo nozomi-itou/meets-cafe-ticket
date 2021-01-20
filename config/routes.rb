@@ -13,10 +13,13 @@ Rails.application.routes.draw do
   devise_scope :user do   # マイページへ遷移
     get 'my_page' => 'users/registrations#my_page'
   end
+  devise_scope :owner do
+    get 'shop_page' => 'owners/registrations#shop_page'
+  end
 
   root to: "shops#index"
 
   resources :users, only: [:edit, :update]
   resources :orders, only:[:index, :create]
-
+  resources :shops
 end

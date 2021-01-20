@@ -1,56 +1,50 @@
 <header>
-      <div id="logo-wrappper">
-        <div id="logo">
-          <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
-        </div>
-        <div id="login">
-          <% if user_signed_in? %>
-            <p><%= link_to "マイページ", my_page_path, class: "ticket" %></p>
-            <p><%= link_to ' ログアウト ', destroy_user_session_path, method: :delete, class: "logout" %></p>
-          <% else %>
-            <p><%= link_to '新規入会', new_user_registration_path, class: "sign-up" %></p>
-            <p><%= link_to 'ログイン', new_user_session_path, class: "login" %></p>
-            <p><%= link_to 'Merchant', new_owner_registration_path, class: "sign-up" %></p>
-          <% end %>
-
-            
+  <div id="logo-wrappper">
+    <div id="logo">
+      <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
+    </div>
+    <div id="login">
+      <% if owner_signed_in? %>
+        <p><%= link_to "マイページ", shop_page_path, class: "ticket" %></p>
+        <p><%= link_to ' ログアウト ', destroy_user_session_path, method: :delete, class: "logout" %></p>
+      <% else %>
+        <p><%= link_to '新規入会', new_user_registration_path, class: "sign-up" %></p>
+        <p><%= link_to 'ログイン', new_user_session_path, class: "login" %></p>
+        <p><%= link_to 'Merchant', new_owner_registration_path, class: "sign-up" %></p>
+      <% end %>
 
 
-          
-
-
-
-          <p id="menu">メニュー</p>
-          <!-- 開閉ボタン -->
-          <div class="btn_trigger">
-            <span class="bar bar_top"></span>
-            <span class="bar bar_mid"></span>
-            <span class="bar bar_bottom"></span>
-          </div>
-          <!-- ハンバーガーメニュー -->
-          <div class="nav-wrapper">
-            <div class="header-nav">
-              <ul class="nav-list">
-                <li class="nav-item itemA"><a href="#fv">サービス内容</a></li>
-                <li class="nav-item itemB"><a href="#about">加盟店ギャラリー</a></li>
-                <li class="nav-item itemA"><a href="./stores/index.html">加盟店を探す</a></li>
-                <li class="nav-item itemB"><a href="./contact/index.html">加盟店募集中</a></li>
-                <li class="nav-item itemA"><a href="#gallery">新着情報</a></li>
-                <li class="nav-item itemB"><a href="#faq">よくある質問</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <p id="menu">メニュー</p>
+      <!-- 開閉ボタン -->
+      <div class="btn_trigger">
+        <span class="bar bar_top"></span>
+        <span class="bar bar_mid"></span>
+        <span class="bar bar_bottom"></span>
       </div>
-      <div id="nav">
-        <nav>
-          <ul>
-            <li><a href="#about">サービス内容</a></li>
-            <li><a href="#gallery">加盟店</a></li>
-            <li><a href="./contact/index.html">加盟店募集中</a></li>
-            <li><a href="#news">新着情報</a></li>
-            <li><a href="#faq">よくある質問</a></li>
+      <!-- ハンバーガーメニュー -->
+      <div class="nav-wrapper">
+        <div class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-item itemA"><a href="#fv">サービス内容</a></li>
+            <li class="nav-item itemB"><a href="#about">加盟店ギャラリー</a></li>
+            <li class="nav-item itemA"><a href="./stores/index.html">加盟店を探す</a></li>
+            <li class="nav-item itemB"><a href="./contact/index.html">加盟店募集中</a></li>
+            <li class="nav-item itemA"><a href="#gallery">新着情報</a></li>
+            <li class="nav-item itemB"><a href="#faq">よくある質問</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
+    </div>
+  </div>
+  <div id="nav">
+    <nav>
+      <ul>
+        <li><a href="#about">サービス内容</a></li>
+        <li><a href="#gallery">加盟店</a></li>
+        <li><a href="./contact/index.html">加盟店募集中</a></li>
+        <li><a href="#news">新着情報</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>

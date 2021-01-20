@@ -52,7 +52,7 @@
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| name        | string     | null: false                    |
+| shop_name   | string     | null: false                    |
 | address     | text       | null: false                    |
 | phone       | integer    | null: false                    |
 | open_close  | integer    | null: false                    |
@@ -63,7 +63,7 @@
 | review      | references | foreign_key: true              |
 
 ### Association
-- belong_to :owner
+- belongs_to :owner
 - has_many :reviews
 
 
@@ -90,4 +90,4 @@
 | user          | references | null: false, foreign_key: true |
 
 ### Association
-- belong_to :user
+- belongs_to :user

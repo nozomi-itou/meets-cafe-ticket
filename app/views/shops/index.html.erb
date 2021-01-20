@@ -1,213 +1,212 @@
 <%= render "shared/header" %>
+<section id="fv">
+  <div class="loop_wrap">
+    <%= image_tag "pctFV.jpg" %>
+  </div>
+  <p id="main-copy">月額500円でカフェ巡りをしよう</p>
+  <div id="fixed-button">
+  <%if user_signed_in?%>
+    <p id="pcb"><%= link_to "Cafe Ticketは" " こちら >>", my_page_path, class: "ticket" %></p>
+  <%else%>
+    <p id="pcb"><%= link_to " 会員登録は☕️"" こちら >>", new_user_registration_path, class: "ticket" %></p>
+  <%end%>
+  </div>
+</section>
+<!-----ファーストビューここまで----->
 
-      <section id="fv">
-        <div class="loop_wrap">
-          <%= image_tag "pctFV.jpg" %>
-        </div>
-        <p id="main-copy">月額500円でカフェ巡りをしよう</p>
-        <div id="fixed-button">
-        <%if user_signed_in?%>
-          <a href="./user./signup/index.html"><p id="pcb">Ticketは<br>こちら >></p><p id="spb">登録は<br>こちら</p></a>
-        <%else%>
-          <p id="pcb"><%= link_to " 会員登録は☕️"" こちら >>", my_page_path, class: "ticket" %></p>
-        <%end%>
-        </div>
-      </section>
-      <!-----ファーストビューここまで----->
+<!-----ABOUTここから----->
+<section id="about">
+  <div id="section-title" class="effect-fade">
+    <%= image_tag 'pct09.png', class: "cafe" %> 
+    <p>とは？</p>
+  </div>
+  <div id="about-text">
+    <p class="effect-fade">毎月たったの500円で、各加盟店でワンドリンクサービスを受けることができます。利用回数の制限はありません。<br>
+      <span class="effect-fade">※無料ドリンク以外のご注文が必要になります。</span></p>
+  </div>
+  <div id="supplement" class="effect-fade">
+    <p>↓↓今だけ入会特典付き↓↓</p>
+  </div>
+  <div id="LP-button" class="effect-fade">
+    <a href="LP/index.html"><p>詳しくはこちら</p></a>
+  </div>
+</section>
+<!-----ABOUTここまで----->
 
-      <!-----ABOUTここから----->
-      <section id="about">
-        <div id="section-title" class="effect-fade">
-          <%= image_tag 'pct09.png', class: "cafe" %> 
-          <p>とは？</p>
+<!-----加盟店ギャラリーここから----->
+<section id="gallery">
+  <div id="gallery-title">
+    <p>加盟店ギャラリー</p>
+  </div>
+  <div id="stores">
+    <div class="store">
+      <img src="images/pct17.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          KIMINO珈琲 渋谷店<br><span>東京都渋谷区神南1-7-3<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 22:00</span>
         </div>
-        <div id="about-text">
-          <p class="effect-fade">毎月たったの500円で、各加盟店でワンドリンクサービスを受けることができます。利用回数の制限はありません。<br>
-            <span class="effect-fade">※無料ドリンク以外のご注文が必要になります。</span></p>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct18.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          Happiness Cafe<br>銀座店<br><span>東京都中央区銀座5-1−1<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 23:00</span>
         </div>
-        <div id="supplement" class="effect-fade">
-          <p>↓↓今だけ入会特典付き↓↓</p>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct19.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          ～cafe&bar～<br>くれのあ 西新宿店<br><span>東京都新宿区西新宿2-11<br>TEL:03-5315-48××<br>OPEN 11:00<br>CLOSE 23:30</span>
         </div>
-        <div id="LP-button" class="effect-fade">
-          <a href="LP/index.html"><p>詳しくはこちら</p></a>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct20.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          Long Moon Coffee<br>六本木駅前店<br><span>東京都港区六本木7-17-8<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 23:00</span>
         </div>
-      </section>
-      <!-----ABOUTここまで----->
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct21.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          luna caldo 池袋店<br><span>東京都豊島区西池袋1-8-26<br>TEL:03-5315-48××<br>OPEN 8:00<br>CLOSE 22:00</span>
+        </div>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct22.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          Cafe SAKURA<br>代々木店<br><span>東京都渋谷区代々木神園町2-1<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 22:00</span>
+        </div>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct23.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          OLIM CAFE<br>西麻布店<br><span>東京都港区西麻布3-12-1<br>TEL:03-5315-48××<br>OPEN 9:00<br>CLOSE 22:00</span>
+        </div>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct24.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          珈彩館 築地店<br><span>東京都中央区明石町10-2<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE<br>21:00</span>
+        </div>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct25.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          Cafe暖日和<br>日本橋店<br><span>東京都中央区日本橋3-15-10<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 22:00</span>
+        </div>
+      </div></a>
+    </div>
+    <div class="store">
+      <img src="images/pct26.jpg" alt="加盟店の写真">
+      <a href="#"><div class="mask">
+        <div class="caption">
+          cielua 浜松店<br><span>東京都中央区日本橋浜町2-59<br>TEL:03-5315-48××<br>OPEN 10:00<br>CLOSE 23:00</span>
+        </div>
+      </div></a>
+    </div>
+  </div>
+  <div id="find">
+    <%= image_tag "pct10.png", class: 'find_more'%>
+    <p><%= link_to "お店を探す", shop_path(@shops), method: :get %></p>
+  </div>
+</section>
+<!-----加盟店ギャラリーここまで----->
 
-      <!-----加盟店ギャラリーここから----->
-      <section id="gallery">
-        <div id="gallery-title">
-          <p>加盟店ギャラリー</p>
+<!-----NEWSここから----->
+<section id="news">
+  <div id="news-title">
+    <p>新着情報</p>
+  </div>
+  <div id="news-wrapper">
+    <a href="./stores/index.html">
+      <div class="article">
+        <div class="photo">
+          <%= image_tag "pct27.jpg", class: 'hoge'%>
         </div>
-        <div id="stores">
-          <div class="store">
-            <img src="images/pct17.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                KIMINO珈琲 渋谷店<br><span>東京都渋谷区神南1-7-3<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 22:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct18.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                Happiness Cafe<br>銀座店<br><span>東京都中央区銀座5-1−1<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 23:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct19.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                ～cafe&bar～<br>くれのあ 西新宿店<br><span>東京都新宿区西新宿2-11<br>TEL:03-5315-48××<br>OPEN 11:00<br>CLOSE 23:30</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct20.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                Long Moon Coffee<br>六本木駅前店<br><span>東京都港区六本木7-17-8<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 23:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct21.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                luna caldo 池袋店<br><span>東京都豊島区西池袋1-8-26<br>TEL:03-5315-48××<br>OPEN 8:00<br>CLOSE 22:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct22.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                Cafe SAKURA<br>代々木店<br><span>東京都渋谷区代々木神園町2-1<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 22:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct23.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                OLIM CAFE<br>西麻布店<br><span>東京都港区西麻布3-12-1<br>TEL:03-5315-48××<br>OPEN 9:00<br>CLOSE 22:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct24.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                珈彩館 築地店<br><span>東京都中央区明石町10-2<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE<br>21:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct25.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                Cafe暖日和<br>日本橋店<br><span>東京都中央区日本橋3-15-10<br>TEL:03-5315-48××<br>OPEN 7:00<br>CLOSE 22:00</span>
-              </div>
-            </div></a>
-          </div>
-          <div class="store">
-            <img src="images/pct26.jpg" alt="加盟店の写真">
-            <a href="#"><div class="mask">
-              <div class="caption">
-                cielua 浜松店<br><span>東京都中央区日本橋浜町2-59<br>TEL:03-5315-48××<br>OPEN 10:00<br>CLOSE 23:00</span>
-              </div>
-            </div></a>
-          </div>
+        <div class="news-text">
+          <date>2020.07.20</date>
+          <p>加盟店が増えました！<br>Gelateria MAKO新宿店</p>
         </div>
-        <div id="find">
-          <%= image_tag "pct10.png", class: 'find_more'%>
-          <a href="./stores/index.html"><p>お店を探す</p></a>
+      </div>
+    </a>
+    <a href="./LP/index.html#section5">
+      <div class="article">
+        <div class="photo">
+          <%= image_tag "pct28.png" , class: 'hog'%>
         </div>
-      </section>
-      <!-----加盟店ギャラリーここまで----->
+        <div class="news-text">
+          <date>2020.06.10</date>
+          <p>新規入会キャンペーン実施中！</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div id="nb">
+    <a href="#"><p id="news-button">過去の記事を見る</p></a>
+  </div>
+</section>
+<!-----NEWSここまで----->
 
-      <!-----NEWSここから----->
-      <section id="news">
-        <div id="news-title">
-          <p>新着情報</p>
-        </div>
-        <div id="news-wrapper">
-          <a href="./stores/index.html">
-            <div class="article">
-              <div class="photo">
-                <%= image_tag "pct27.jpg", class: 'hoge'%>
-              </div>
-              <div class="news-text">
-                <date>2020.07.20</date>
-                <p>加盟店が増えました！<br>Gelateria MAKO新宿店</p>
-              </div>
-            </div>
-          </a>
-          <a href="./LP/index.html#section5">
-            <div class="article">
-              <div class="photo">
-                <%= image_tag "pct28.png" , class: 'hog'%>
-              </div>
-              <div class="news-text">
-                <date>2020.06.10</date>
-                <p>新規入会キャンペーン実施中！</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div id="nb">
-          <a href="#"><p id="news-button">過去の記事を見る</p></a>
-        </div>
-      </section>
-      <!-----NEWSここまで----->
-
-      <!-----FAQここから----->
-      <section id="faq">
-        <div id="faq-title">
-          <p>よくある質問</p>
-        </div>
-        <div id="accordion" class="accordion-container">
-          <h4 class="accordion-title js-accordion-title">
-            Q.  <span>支払い方法を教えて下さい。</span>
-          </h4>
-          <div class="accordion-content">
-            <p>A.  <span>クレジットカード支払い、または銀行振り込みのお支払いになります。</span></p>
-          </div>
-          <h4 class="accordion-title js-accordion-title">
-            Q.  <span>ワンドリンクサービスは何回使えますか？</span>
-          </h4>
-          <div class="accordion-content">
-            <p>A.  <span>1日何回でも利用できます。※一会計につきお一人様一杯まで。</span></p>
-          </div>
-          <h4 class="accordion-title js-accordion-title">
-          Q.  <span>ワンドリンクサービスで注文できるメニューはなんですか？</span>
-          </h4>
-          <div class="accordion-content">
-            <p>A.　<span>加盟店により異なります。加盟店リストよりメニューをご確認下さい。</span></p>
-          </div>
-          <h4 class="accordion-title js-accordion-title">
-            Q.  <span>サービスを利用できる店舗はどう調べたらいいですか？</span>
-          </h4>
-          <div class="accordion-content">
-            <p>A.  <span>ホームページで最新情報を更新しております。加盟店リストをご確認下さい。</span></p>
-          </div>
-          <h4 class="accordion-title js-accordion-title">
-            Q.  <span>ワンドリンクサービスの注文方法を教えて下さい。</span>
-          </h4>
-          <div class="accordion-content">
-            <p>A.  <span>加盟店で注文時にスマートフォン画面のチケットをご提示下さい。</span></p>
-          </div>
-          <h4 class="accordion-title js-accordion-title">
-            Q.  <span>退会の手続きはどうなりますか？</span>
-          </h4>
-          <div class="accordion-content">
-            <p>A.  <span>ログイン後マイページの「退会する」をクリックして手続きをして下さい。</span></p>
-          </div>
-        </div>
-      </section>
-      <!-----FAQここまで----->
+<!-----FAQここから----->
+<section id="faq">
+  <div id="faq-title">
+    <p>よくある質問</p>
+  </div>
+  <div id="accordion" class="accordion-container">
+    <h4 class="accordion-title js-accordion-title">
+      Q.  <span>支払い方法を教えて下さい。</span>
+    </h4>
+    <div class="accordion-content">
+      <p>A.  <span>クレジットカード支払い、または銀行振り込みのお支払いになります。</span></p>
+    </div>
+    <h4 class="accordion-title js-accordion-title">
+      Q.  <span>ワンドリンクサービスは何回使えますか？</span>
+    </h4>
+    <div class="accordion-content">
+      <p>A.  <span>1日何回でも利用できます。※一会計につきお一人様一杯まで。</span></p>
+    </div>
+    <h4 class="accordion-title js-accordion-title">
+    Q.  <span>ワンドリンクサービスで注文できるメニューはなんですか？</span>
+    </h4>
+    <div class="accordion-content">
+      <p>A.　<span>加盟店により異なります。加盟店リストよりメニューをご確認下さい。</span></p>
+    </div>
+    <h4 class="accordion-title js-accordion-title">
+      Q.  <span>サービスを利用できる店舗はどう調べたらいいですか？</span>
+    </h4>
+    <div class="accordion-content">
+      <p>A.  <span>ホームページで最新情報を更新しております。加盟店リストをご確認下さい。</span></p>
+    </div>
+    <h4 class="accordion-title js-accordion-title">
+      Q.  <span>ワンドリンクサービスの注文方法を教えて下さい。</span>
+    </h4>
+    <div class="accordion-content">
+      <p>A.  <span>加盟店で注文時にスマートフォン画面のチケットをご提示下さい。</span></p>
+    </div>
+    <h4 class="accordion-title js-accordion-title">
+      Q.  <span>退会の手続きはどうなりますか？</span>
+    </h4>
+    <div class="accordion-content">
+      <p>A.  <span>ログイン後マイページの「退会する」をクリックして手続きをして下さい。</span></p>
+    </div>
+  </div>
+</section>
+<!-----FAQここまで----->
 
 <%= render "shared/footer" %>
 
