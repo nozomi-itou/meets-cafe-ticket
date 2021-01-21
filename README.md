@@ -21,7 +21,7 @@
 | review             | references | foreign_key: true              |
 
 ### Association
-- has_many :reviews
+- has_many :comments
 - has_one :order
 
 
@@ -52,7 +52,7 @@
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| name        | string     | null: false                    |
+| shop_name   | string     | null: false                    |
 | address     | text       | null: false                    |
 | phone       | integer    | null: false                    |
 | open_close  | integer    | null: false                    |
@@ -63,13 +63,13 @@
 | review      | references | foreign_key: true              |
 
 ### Association
-- belong_to :owner
-- has_many :reviews
+- belongs_to :owner
+- has_many :comments
 
 
 
 
-## reviews テーブル
+## comments テーブル
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 | title     | text       | null: false                    |
@@ -90,4 +90,4 @@
 | user          | references | null: false, foreign_key: true |
 
 ### Association
-- belong_to :user
+- belongs_to :user

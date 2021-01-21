@@ -1,0 +1,250 @@
+<body ontouchstart>
+  <%= render "shared/header" %>
+  <!-----メインここから----->
+  <main>
+    <!-----パンくずリストここから----->
+    <section id="pl">
+      <div id="bgi">
+        <ul>
+          <li><%= link_to "TOPページ", root_path%></li>
+          <li>></li>
+          <li>加盟店一覧</li>
+        </ul>
+      </div>
+    </section>
+    <!-----パンくずリストここまで----->
+
+    <!-----検索ここから----->
+    <form>
+      <div id="serch">
+        <div class="area">
+          <p><span>エリアから探す</span></p>
+          <div class="area-wrap">
+            <p>> 東京</p>
+            <select name="area">
+              <option value="shinjuku">新宿区</option>
+              <option value="shibuya">渋谷区</option>
+              <option value="toshima">豊島区</option>
+              <option value="tyuuou">中央区</option>
+              <option value="chiyoda">千代田区</option>
+              <option value="shinagawa">品川区</option>
+              <option value="minato">港区</option>
+              <option value="meguro">目黒区</option>
+            </select>
+          </div>
+        </div>
+        <div class="sorting">
+          <p><span>並べ替え</span></p>
+          <div class="sorting-wrap">
+            <p><a href="#">> 新着順</a></p>
+            <p><a href="#">> おすすめ順</a></p>
+          </div>
+        </div>
+
+      </div>
+    </form>
+    <!-----検索ここまで----->
+
+    <!-----店舗リストここから----->
+    <section id="#stores">
+      <div id="wrapper">
+        <div id="store">
+
+          <% @shops.each do |shop| %> <!-----店舗リスト１----->
+          <div class="store-list">
+            <div class="store-pct">
+              <%= image_tag shop.image ,class:"shop-img" %>
+            </div>
+            <div class="information">
+              <div class="store-name">
+                <h2><%= shop.shop_name %></h2>
+                <p><a href="https://goo.gl/maps/w6PcYZA7etQmQA2s5" target="_blank" rel="noopener noreferrer">MAP</a></p>
+              </div>
+              <div class="adress">
+                <p><%= shop.area.name%><%= shop.address %></p>
+                <ul>
+                  <li>TEL：<%= shop.phone %></li>
+                  <li>営業時間：<%= shop.open_close %></li>
+                </ul>
+              </div>
+              <div class="menu">
+                <h3>選べるワンドリンクサービス</h3>
+                <ol>
+                  <li><%= shop.drink %></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <%end%><!-----店舗リスト１end----->
+
+          <div class="store-list">
+            <div class="store-pct">
+              <%= image_tag "pct30.jpg", class:"shop-icon" %>
+            </div>
+            <div class="information">
+              <div class="store-name">
+                <h2><a href="#">KIMINO珈琲 渋谷店</a></h2>
+                <p><a href="https://goo.gl/maps/8RGs8eNYosRFGBcx9" target="_blank" rel="noopener noreferrer">MAP</a></p>
+              </div>
+              <div class="adress">
+                <p>東京都渋谷区神南1丁目7-3</p>
+                <ul>
+                  <li>電話 : 03-5315-48××</li>
+                  <li>営業時間：7時〜22時</li>
+                </ul>
+              </div>
+              <div class="menu">
+                <h3>選べるワンドリンクサービス</h3>
+                <ul>
+                  <li>ブレンドコーヒー</li>
+                  <li>エソプレッソコーヒー</li>
+                  <li>カプチーノ</li>
+                  <li>ロイヤルミルクティー</li>
+                  <li>タピオカミルクティー</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="store-list">
+            <div class="store-pct">
+              <%= image_tag "pct31.jpg", class:"shop-icon" %>
+            </div>
+            <div class="information">
+              <div class="store-name">
+                <h2><a href="#">Happiness Cafe 銀座店</a></h2>
+                <p><a href="https://goo.gl/maps/TdpUh4NZ3GDaeU9g6" target="_blank" rel="noopener noreferrer">MAP</a></p>
+              </div>
+              <div class="adress">
+                <p>東京都中央区銀座5丁目1−1</p>
+                <ul>
+                  <li>電話 : 03-5315-48××</li>
+                  <li>営業時間：7時〜23時</li>
+                </ul>
+              </div>
+              <div class="menu">
+                <h3>選べるワンドリンクサービス</h3>
+                <ul>
+                  <li>ブレンドコーヒー</li>
+                  <li>アメリカンコーヒー</li>
+                  <li>エスプレッソコーヒー</li>
+                  <li>豆乳ラテ</li>
+                  <li>カプチーノ</li>
+                  <li>アイスルイボスティー</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="store-list">
+            <div class="store-pct">
+              <%= image_tag "pct32.jpg", class:"shop-icon" %>
+            </div>
+            <div class="information">
+              <div class="store-name">
+                <h2><a href="#">Long Moon Coffee 六本木駅前店</a></h2>
+                <p><a href="https://goo.gl/maps/pPNF9maxQYkp6cWP9" target="_blank" rel="noopener noreferrer">MAP</a></p>
+              </div>
+              <div class="adress">
+                <p>東京都港区六本木7丁目17-8</p>
+                <ul>
+                  <li>電話 : 03-5315-48××</li>
+                  <li>営業時間：7時〜23時</li>
+                </ul>
+              </div>
+              <div class="menu">
+                <h3>選べるワンドリンクサービス</h3>
+                <ul>
+                  <li>オリジナルブレンド</li>
+                  <li>エスプレッソコーヒー</li>
+                  <li>カプチーノ</li>
+                  <li>アイスティー</li>
+                  <li>アイスココア</li>
+                  <li>青森県産りんごジュース</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-----店舗リスト固定----->
+          <div class="store-list">
+            <div class="store-pct">
+              <%= image_tag "pct33.jpg", class:"shop-icon" %>
+            </div>
+            <div class="information">
+              <div class="store-name">
+                <h2><a href="#">～cafe&bar～くれのあ 西新宿店</a></h2>
+                <p><a href="https://goo.gl/maps/S2EmfRrbvZNuQxR36" target="_blank" rel="noopener noreferrer">MAP</a></p>
+              </div>
+              <div class="adress">
+                <p>東京都新宿区西新宿2丁目11</p>
+                <ul>
+                  <li>電話 : 03-5315-48××</li>
+                  <li>営業時間：11時〜23時30分</li>
+                </ul>
+              </div>
+              <div class="menu">
+                <h3>選べるワンドリンクサービス</h3>
+                <ul>
+                  <li>アメリカンコーヒー</li>
+                  <li>ブレンドコーヒー</li>
+                  <li>プレミアムアイスティー</li>
+                  <li>32種の野菜ジュース</li>
+                  <li>季節の果実スムージー</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-----店舗リスト固定----->
+        </div>
+        
+        <div id="side">
+          <div id="area">
+            <h4>エリアから探す</h4>
+            <ul>
+              <li><a href="#">>東京都</a></li>
+              <li><a href="#">　>新宿区</a></li>
+              <li><a href="#">　>渋谷区</a></li>
+              <li><a href="#">　>豊島区</a></li>
+              <li><a href="#">　>中央区</a></li>
+              <li><a href="#">　>千代田区</a></li>
+              <li><a href="#">　>品川区</a></li>
+              <li><a href="#">　>港区</a></li>
+              <li><a href="#">　>目黒区</a></li>
+            </ul>
+          </div>
+          <div id="sorting">
+            <h4>並べ替え</h4>
+            <ul>
+              <li><a href="#">>新着順</a></li>
+              <li><a href="#">>おすすめ順</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----店舗リストここまで----->
+
+    <!-----ページ数ここから----->
+    <section id="page">
+      <div>
+        <ul>
+          <li class="here">1</li>
+          <a href="#"><li>2</li></a>
+          <a href="#"><li>3</li></a>
+          <p id="between">.....</p>
+          <a href="#"><li>8</li></a>
+          <a href="#"><li>次へ</li></a>
+        </ul>
+      </div>
+    </section>
+    <!-----ページ数ここまで----->
+  </main>
+  <!-----メインここまで----->
+
+  <!-----フッターここから----->
+  <%= render "shared/footer" %>
+  <!-----フッターここまで----->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
