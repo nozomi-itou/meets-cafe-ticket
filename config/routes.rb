@@ -21,5 +21,12 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
   resources :orders, only:[:index, :create]
-  resources :shops
+
+  resources :shops do
+    resources :comments, only: :create
+    collection do
+      get 'search'
+    end
+  end
+  
 end
