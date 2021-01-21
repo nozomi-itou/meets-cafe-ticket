@@ -1,0 +1,46 @@
+<h2>ここに店の情報</h2><div class="store-list">
+  <div class="store-pct">
+    <%= image_tag @shop.image ,class:"shop-img" %>
+  </div>
+  <div class="information">
+    <div class="store-name">
+      <h2><%= @shop.shop_name %></h2>
+      <p><a href="https://goo.gl/maps/w6PcYZA7etQmQA2s5" target="_blank" rel="noopener noreferrer">MAP</a></p>
+    </div>
+    <div class="adress">
+      <p><%= @shop.area.name%><%= @shop.address %></p>
+      <ul>
+        <li>TEL：<%= @shop.phone %></li>
+        <li>営業時間：<%= @shop.open_close %></li>
+      </ul>
+    </div>
+    <div class="menu">
+      <h3>選べるワンドリンクサービス</h3>
+      <ol>
+        <li><%= @shop.drink %></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<h1>コメント一覧</h1>
+
+<div class="container">
+  <% if user_signed_in? %>
+    <%= form_with(model: @comment, local: true) do |form| %>
+      <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  <% else %>
+    <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+  <% end %>
+  <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <%= comment.text %>
+        </p>
+      <% end %>
+    </div>
+</div>

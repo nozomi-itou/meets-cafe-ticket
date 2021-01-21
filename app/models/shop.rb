@@ -3,6 +3,7 @@ class Shop < ApplicationRecord
   belongs_to :area
   belongs_to :category
   belongs_to :owner
+  has_many :comments
   has_one_attached :image
 
   validates :image, presence: true

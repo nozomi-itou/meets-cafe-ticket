@@ -23,6 +23,7 @@ class ShopsController < ApplicationController
 
   def show
     @shops = Shop.includes(:owner).order("created_at DESC")
+
   end
 
 

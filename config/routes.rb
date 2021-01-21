@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   resources :orders, only:[:index, :create]
 
   resources :shops do
-    resources :comments, only: :create
+    resources :comments, only:[:index, :create]
     collection do
       get 'search'
     end

@@ -50,7 +50,7 @@
       <div id="wrapper">
         <div id="store">
 
-          <% @shops.each do |shop| %> <!-----店舗リスト１----->
+          <% @shops.each do |shop| %> <!-----投稿されたリスト----->
           <div class="store-list">
             <div class="store-pct">
               <%= image_tag shop.image ,class:"shop-img" %>
@@ -59,6 +59,7 @@
               <div class="store-name">
                 <h2><%= shop.shop_name %></h2>
                 <p><a href="https://goo.gl/maps/w6PcYZA7etQmQA2s5" target="_blank" rel="noopener noreferrer">MAP</a></p>
+                <p><%= link_to "レビュー", shop_comments_path(shop.id), method: :get, class: "review" %></p>
               </div>
               <div class="adress">
                 <p><%= shop.area.name%><%= shop.address %></p>
