@@ -21,7 +21,7 @@
 | review             | references | foreign_key: true              |
 
 ### Association
-- has_many :reviews
+- has_many :comments
 - has_one :order
 
 
@@ -64,12 +64,12 @@
 
 ### Association
 - belongs_to :owner
-- has_many :reviews
+- has_many :comments
 
 
 
 
-## reviews テーブル
+## comments テーブル
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 | title     | text       | null: false                    |
