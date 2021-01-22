@@ -7,4 +7,13 @@ class Shop < ApplicationRecord
 
   validates :image, presence: true
   validates :area_id, numericality: { other_than: 1 } 
+
+  def self.search(search)
+    if search != ""
+      Shop.where('shop_name LIKE(?)', "%#{search}%")
+    else
+      Shop.all
+    end
+  end
+
 end

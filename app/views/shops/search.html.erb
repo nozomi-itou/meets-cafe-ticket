@@ -1,0 +1,37 @@
+<%= form_with(url: search_shops_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "ショップを検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @shops.each do |shop| %>
+    <div id="logo-wrappper">
+    <div id="logo">
+      <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
+    </div>
+    </div>
+    <div class="store-list">
+      <div class="store-pct">
+        <%= image_tag shop.image ,class:"shop-img" %>
+      </div>
+      <div class="information">
+        <div class="store-name">
+          <h2><%= shop.shop_name %></h2>
+          <p><a href="https://goo.gl/maps/w6PcYZA7etQmQA2s5" target="_blank" rel="noopener noreferrer">MAP</a></p>
+        </div>
+        <div class="adress">
+          <p><%= shop.area.name%><%= shop.address %></p>
+          <ul>
+            <li>TEL：<%= shop.phone %></li>
+            <li>営業時間：<%= shop.open_close %></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <h3>選べるワンドリンクサービス</h3>
+          <ol>
+            <li><%= shop.drink %></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
