@@ -19,11 +19,13 @@ class ShopsController < ApplicationController
   end
 
   def edit
+    @shop = Shop.find_by(params[:id])
   end
 
   def show
-    @shops = Shop.includes(:owner).order("created_at DESC")
-
+    @shop = Shop.find(params[:id])
+    @comment = Comment.new
+    @comments = @shop.comments.includes(:user).order("created_at DESC")
   end
 
 
