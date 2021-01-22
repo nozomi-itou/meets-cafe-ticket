@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "home#index"
+
   devise_for :owners, controllers: {
     sessions: 'owners/sessions',
     passwords: 'owners/passwords',
@@ -17,13 +19,11 @@ Rails.application.routes.draw do
     get 'shop_page' => 'owners/registrations#shop_page'
   end
 
-  root to: "shops#index"
-
   resources :users, only: [:edit, :update]
   resources :orders, only:[:index, :create]
 
   resources :shops do
-    resources :comments, only: :create
+    resources :comments, only:[:index, :create]
     collection do
       get 'search'
     end
