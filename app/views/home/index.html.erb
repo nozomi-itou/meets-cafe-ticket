@@ -5,6 +5,7 @@
   </div>
   <p id="main-copy">月額500円でカフェ巡りをしよう</p>
   <div id="fixed-button">
+
   <% if owner_signed_in? || user_signed_in?%>
     <% if user_signed_in?%>
       <p id="pcb"><%= link_to "Cafe Ticketは" " こちら >>", my_page_path, class: "ticket" %></p>
