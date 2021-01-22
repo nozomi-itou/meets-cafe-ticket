@@ -1,7 +1,6 @@
 class Shop < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area
-  belongs_to :category
   belongs_to :owner
   has_many :comments
   has_one_attached :image

@@ -32,7 +32,7 @@ class ShopsController < ApplicationController
   private
 
   def shop_params
-    params.require(:shop).permit(:image, :shop_name, :address, :phone, :open_close, :drink, :category_id, :area_id).merge(owner_id: current_owner.id)
+    params.require(:shop).permit(:image, :shop_name, :address, :phone, :open_close, :drink, :area_id).merge(owner_id: current_owner.id)
   end
 
 end

@@ -1,5 +1,3 @@
-<h1>Home#index</h1>
-
 <%= render "shared/header" %>
 <section id="fv">
   <div class="loop_wrap">
@@ -7,8 +5,12 @@
   </div>
   <p id="main-copy">月額500円でカフェ巡りをしよう</p>
   <div id="fixed-button">
-  <%if user_signed_in?%>
-    <p id="pcb"><%= link_to "Cafe Ticketは" " こちら >>", my_page_path, class: "ticket" %></p>
+  <% if owner_signed_in? || user_signed_in?%>
+    <% if user_signed_in?%>
+      <p id="pcb"><%= link_to "Cafe Ticketは" " こちら >>", my_page_path, class: "ticket" %></p>
+    <% elsif owner_signed_in? %>
+      <p id="pcb"><%= link_to "🏡MyShopは" " こちら >>", shop_page_path, class: "ticket" %></p>
+    <% end %>
   <%else%>
     <p id="pcb"><%= link_to " 会員登録は☕️"" こちら >>", new_user_registration_path, class: "ticket" %></p>
   <%end%>
