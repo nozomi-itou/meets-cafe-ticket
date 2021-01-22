@@ -4,13 +4,18 @@
       <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
     </div>
     <div id="login">
-    <% if user_signed_in? || owner_signed_in? %>
-      <% if user_signed_in? %>
-        <p><%= link_to "マイページ", my_page_path, class: "ticket" %></p>
-        <p><%= link_to ' ログアウト ', destroy_user_session_path, method: :delete, class: "logout" %></p>
-      <% elsif owner_signed_in? %>
-        <p><%= link_to "マイページ", shop_page_path, class: "ticket" %></p>
-        <p><%= link_to ' ログアウト ', destroy_owner_session_path, method: :delete, class: "logout" %></p>
+      <% if owner_signed_in? || user_signed_in?%>
+        <% if owner_signed_in? %>
+          <p><%= link_to "shop", shop_page_path, class: "ticket" %></p>
+          <p><%= link_to ' ログアウト ', destroy_owner_session_path, method: :delete, class: "logout" %></p>
+        <% elsif user_signed_in?%>
+          <p><%= link_to "マイページ", my_page_path, class: "ticket" %></p>
+          <p><%= link_to ' ログアウト ', destroy_user_session_path, method: :delete, class: "logout" %></p>
+        <% end %>
+      <% else %>
+        <p><%= link_to '新規入会', new_user_registration_path, class: "sign-up" %></p>
+        <p><%= link_to 'ログイン', new_user_session_path, class: "login" %></p>
+        <p><%= link_to 'xx🔒xx', new_owner_registration_path, class: "sign-up" %></p>
       <% end %>
     <% else %>
       <p><%= link_to '新規入会', new_user_registration_path, class: "sign-up" %></p>

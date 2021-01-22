@@ -70,18 +70,6 @@
     </div>
     <%# /選べるドリンク %>
 
-    <%# 詳細 %>
-    <div class="shop-detail">
-      <div class="weight-bold-text">詳細</div>
-      <div class="form">
-        <div class="weight-bold-text">
-          エリア選択（東京都のみ）
-          <span class="indispensable">任意</span>
-        </div>
-      </div>
-      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category"}) %>
-    <%# /詳細 %>
-
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "登録する" ,class:"sell-btn" %>

@@ -28,7 +28,8 @@
   </div>
 </div>
 
-<h1>クチコミを投稿してみよう！</h1>
+
+<h1>コメントを投稿してみよう！</h1>
 
 <div class="container">
   <% if user_signed_in? %>
@@ -40,16 +41,15 @@
     <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
   <% end %>
   <div class="comments">
-      <h4>＜reviews＞</h4>
+      <h4>＜REVIEWS＞</h4>
       <% @comments.each do |comment| %>
         <p>
           <strong><%= comment.user.nickname %>：</strong>
           <%= comment.text %>
         </p>
       <% end %>
-
       <% if @comments.length == 0 %>
-        <p>コメントはまだありません</p>
+      <p>・・・コメントはまだありません・・・</p>
       <% end %>
     </div>
 </div>

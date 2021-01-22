@@ -6,7 +6,6 @@ class CreateShops < ActiveRecord::Migration[6.0]
       t.string :phone, null: false  
       t.text   :open_close, null: false
       t.text   :drink, null: false  
-      t.integer :category_id
       t.integer :area_id, null: false
       t.references :owner, null: false, foreign_key: true
 
