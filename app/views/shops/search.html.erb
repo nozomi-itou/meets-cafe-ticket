@@ -1,14 +1,15 @@
-<%= form_with(url: search_shops_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "ショップを検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-<% end %>
+<div id="logo-wrappper">
+<div id="logo">
+  <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
+</div>
+</div><p>＜SHOP SEARCH＞＞</p>
+  <%= form_with(url: search_shops_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "ショップを検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+
 <div class="contents row">
   <% @shops.each do |shop| %>
-    <div id="logo-wrappper">
-    <div id="logo">
-      <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
-    </div>
-    </div>
     <div class="store-list">
       <div class="store-pct">
         <%= image_tag shop.image ,class:"shop-img" %>
