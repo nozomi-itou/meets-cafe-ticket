@@ -3,7 +3,7 @@
   <div>
     <%= image_tag "pct35.png", class:"mono" %>
   </div>
-  
+  <%= render 'shared/error_messages', model: f.object %>
   <div>
     <label for="name">Nickname</label>
     <span class="indispensable">必須</span>

@@ -5,7 +5,18 @@ class Shop < ApplicationRecord
   has_many :comments
   has_one_attached :image
 
-  validates :image, presence: true
+  with_options presence: true do
+    validates :shop_name 
+    validates :address
+    validates :phone, format: { with: /\A[0-9]{2,4}-[0-9]{2,4}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)" }, length: { maximum: 13 }
+    
+    validates :open_close
+    validates :drink
+    validates :area_id
+    validates :owner_id
+    validates :image
+  end
+
   validates :area_id, numericality: { other_than: 1 } 
 
   def self.search(search)
