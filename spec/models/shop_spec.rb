@@ -59,9 +59,6 @@ RSpec.describe Shop, type: :model do
         expect(@shop.errors.full_messages).to include("Phone is invalid. Include hyphen(-)")
       end
 
-
-
-
       it "営業時間の情報がないと登録できない" do
         @shop.open_close = nil
         @shop.valid?
@@ -78,6 +75,12 @@ RSpec.describe Shop, type: :model do
         @shop.area_id = 1
         @shop.valid?
         expect(@shop.errors.full_messages).to include("Area must be other than 1")
+      end
+
+      it 'ownerが紐付いていないと保存できないこと' do
+        @shop.owner = nil
+        @shop.valid?
+        expect(@shop.errors.full_messages).to include("Owner must exist")
       end
     end
   end
