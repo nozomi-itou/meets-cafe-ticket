@@ -8,7 +8,7 @@
 
   <% if owner_signed_in? || user_signed_in?%>
     <% if user_signed_in?%>
-      <p id="pcb"><%= link_to "Cafe Ticketは" " こちら >>", my_page_path, class: "ticket" %></p>
+      <p id="pcb"><%= link_to "CafeTicketは" " こちら >>", my_page_path, class: "ticket" %></p>
     <% elsif owner_signed_in? %>
       <p id="pcb"><%= link_to "🏡MyShopは" " こちら >>", shop_page_path, class: "ticket" %></p>
     <% end %>

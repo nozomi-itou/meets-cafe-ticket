@@ -1,5 +1,5 @@
 class ShopsController < ApplicationController
-  before_action :authenticate_owner!, except: [:index, :show]
+  before_action :authenticate_owner!, except: [:index, :show, :search]
 
   def index
     @shops = Shop.includes(:owner).order("created_at DESC")
@@ -27,6 +27,12 @@ class ShopsController < ApplicationController
     @comment = Comment.new
     @comments = @shop.comments.includes(:user).order("created_at DESC")
   end
+
+  def search
+
+    @shops = Shop.search(params[:keyword])
+  end
+
 
 
   private
