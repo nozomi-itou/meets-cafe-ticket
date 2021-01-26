@@ -1,6 +1,6 @@
-<body ontouchstart>
-  <%= render "shared/header" %>
+<%= render "shared/header" %>
   <!-----メインここから----->
+<div class="index">
   <main>
     <!-----パンくずリストここから----->
     <section id="pl">
@@ -52,10 +52,9 @@
     <!-----検索ここまで----->
 
     <!-----店舗リストここから----->
-    <section id="#stores">
+    <div class="stores">
       <div id="wrapper">
         <div id="store">
-
           <% @shops.each do |shop| %> <!-----投稿されたリスト----->
           <div class="store-list">
             <div class="store-pct">
@@ -83,7 +82,7 @@
             </div>
           </div>
           <%end%><!-----店舗リスト１end----->
-
+        
           <div class="store-list">
             <div class="store-pct">
               <%= image_tag "pct30.jpg", class:"shop-icon" %>
@@ -202,7 +201,7 @@
           </div>
           <!-----店舗リスト固定----->
         </div>
-        
+
         <div id="side">
           <div id="area">
             <h4>エリアから探す</h4>
@@ -227,7 +226,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!-----店舗リストここまで----->
 
     <!-----ページ数ここから----->
@@ -246,12 +245,7 @@
     <!-----ページ数ここまで----->
   </main>
   <!-----メインここまで----->
-
+</div>
   <!-----フッターここから----->
-  <%= render "shared/footer" %>
+<%= render "shared/footer" %>
   <!-----フッターここまで----->
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="../js/main.js"></script>
-</body>

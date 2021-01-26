@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   }
   devise_scope :user do   # マイページへ遷移
     get 'my_page' => 'users/registrations#my_page'
+    get '/users/sign_out' => 'devise/sessions#destroy'
   end
   devise_scope :owner do
     get 'shop_page' => 'owners/registrations#shop_page'
+    get '/owners/sign_out' => 'devise/sessions#destroy'
   end
 
   resources :users, only: [:edit, :update]

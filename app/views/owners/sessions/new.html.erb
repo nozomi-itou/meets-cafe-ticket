@@ -1,26 +1,30 @@
-<h2>Log in</h2>
+<div class="roguinn">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div id="wrapper" class="fadeIn">
+      <div>
+        <%= link_to image_tag("pct35.png", class:"mono"), "/" %>
+      </div>
+      </div>
+      <p>※※※※※※ こちらはオーナー様専用のページです ※※※※※</p>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div>
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      <div id="mail">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+      <div id="submit">
+        <div class="actions">
+          <%= f.submit "ログイン" %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+      <div id="sign-up">
+        <p><%= link_to '🔒新規登録はこちら', new_owner_registration_path, class: "login" %></p>
+      </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "owners/shared/links" %>
+</div>

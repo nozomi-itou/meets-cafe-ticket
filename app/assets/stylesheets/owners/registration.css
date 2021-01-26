@@ -3,10 +3,10 @@
 }
 
 
-.body {
+.al {
   display: flex;
   justify-content: center;
-
+  background-color: #ddd;
 }
 
 

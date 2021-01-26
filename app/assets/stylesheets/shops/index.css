@@ -1,56 +1,6 @@
-/*----------
-  Base
----------*/
-html{
-  scroll-behavior: smooth;
-  font-size: 62.5%;
-
-}
-
-body{
-  color: #555555;
-  font-family: 'Hiragino Kaku Gothic Pro',sans-serif;
-  font-style: normal;
-  font-size:1.6rem;
-  width: 100vw;
-  letter-spacing: 0.1rem;
-  margin: 0 auto;
-}
-
-a {
-  color: #555555;
-}
-
-
-
-/*----------
-  pl
----------*/
-#bgi{
-  background-color: #D8E0DC;
-  height: 70px;
-  position: relative;
-  background-image: url(../images/pct53.png);
-  background-repeat: no-repeat;
-  background-size: 230px;
-  background-position: 50% 50%;
-}
-
-#bgi ul{
+.index{
   display: flex;
-  margin-left: 120px;
-  position: absolute;
-  top: 23px;
 }
-
-#bgi ul li{
-  margin-right: 20px;
-}
-
-#bgi ul li:first-child{
-  text-decoration: underline;
-}
-
 
 
 /*----------
@@ -69,7 +19,6 @@ a {
 
 .store-pct img{
   width: 300px;
-  height: 200px;
 }
 
 .store-list{
@@ -224,7 +173,3 @@ h4{
   transition: 0.8s;
 }
 
-.shop-img {
-  width: 33vh;
-  height: 28vh;
-}
