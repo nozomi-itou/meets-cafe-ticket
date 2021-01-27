@@ -54,6 +54,18 @@ a {
   width: 88px;
   text-align: center;
 }
+#sss p a{
+  background-color: #5B3E24;
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+  display: block;
+  margin-right: 30px;
+  margin-top: 65px;
+  font-size: 1.6rem;
+  width: 30px;
+  text-align: center;
+}
+
 
 #logo-wrappper{
   display: flex;

@@ -3,7 +3,7 @@
 <div class="index">
   <main>
     <!-----パンくずリストここから----->
-    <section id="pl">
+    <div class="pl">
       <div id="bgi">
         <ul>
           <li><%= link_to "TOPページ", root_path%></li>
@@ -11,44 +11,17 @@
           <li>加盟店一覧</li>
         </ul>
       </div>
-    </section>
+    </div>
     <!-----パンくずリストここまで----->
 
     <!-----検索ここから----->
+    <div class="search">
       <p>SHOP SEARCH</p>
         <%= form_with(url: search_shops_path, local: true, method: :get, class: "search-form") do |form| %>
           <%= form.text_field :keyword, placeholder: "お店を検索する", class: "search-input" %>
           <%= form.submit "検索", class: "search-btn" %>
         <% end %>
-
-    <form>
-      <div id="serch">
-        <div class="area">
-          <p><span>エリアから探す</span></p>
-          <div class="area-wrap">
-            <p>> 東京</p>
-            <select name="area">
-              <option value="shinjuku">新宿区</option>
-              <option value="shibuya">渋谷区</option>
-              <option value="toshima">豊島区</option>
-              <option value="tyuuou">中央区</option>
-              <option value="chiyoda">千代田区</option>
-              <option value="shinagawa">品川区</option>
-              <option value="minato">港区</option>
-              <option value="meguro">目黒区</option>
-            </select>
-          </div>
-        </div>
-        <div class="sorting">
-          <p><span>並べ替え</span></p>
-          <div class="sorting-wrap">
-            <p><a href="#">> 新着順</a></p>
-            <p><a href="#">> おすすめ順</a></p>
-          </div>
-        </div>
-
-      </div>
-    </form>
+    </div>
     <!-----検索ここまで----->
 
     <!-----店舗リストここから----->
@@ -200,30 +173,6 @@
             </div>
           </div>
           <!-----店舗リスト固定----->
-        </div>
-
-        <div id="side">
-          <div id="area">
-            <h4>エリアから探す</h4>
-            <ul>
-              <li><a href="#">>東京都</a></li>
-              <li><a href="#">　>新宿区</a></li>
-              <li><a href="#">　>渋谷区</a></li>
-              <li><a href="#">　>豊島区</a></li>
-              <li><a href="#">　>中央区</a></li>
-              <li><a href="#">　>千代田区</a></li>
-              <li><a href="#">　>品川区</a></li>
-              <li><a href="#">　>港区</a></li>
-              <li><a href="#">　>目黒区</a></li>
-            </ul>
-          </div>
-          <div id="sorting">
-            <h4>並べ替え</h4>
-            <ul>
-              <li><a href="#">>新着順</a></li>
-              <li><a href="#">>おすすめ順</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

@@ -1,8 +1,21 @@
-<h1>shop_page</h1>
-<%= link_to " Shopを登録する", new_shop_path, method: :get%>
+<div id="my_page_logo">
+  <div id="logo">
+    <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
+  </div>
+</div>
 
+<div class="owner">
+  <%= current_owner.last_name %><%= " " %><%= current_owner.first_name %><%= " 様" %>
+</div>
 
+<div class="new_shop">
+  <%= link_to " Shopを登録する", new_shop_path, method: :get%>
+</div>
 
-<%= link_to "ログアウト", destroy_owner_session_path, method: :delete%>
+<div class="rink">
+  <%= link_to "ログアウト", destroy_owner_session_path, method: :delete%>
+</div>
 
-<%= link_to "Top Page", root_path%>
+<div class="rink">
+  <%= link_to "トップページへ戻る", root_path%>
+</div>

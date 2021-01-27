@@ -1,46 +1,35 @@
+<div id="my_page_logo">
+  <div id="logo">
+    <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
+  </div>
+</div>
+
 <div class="AccountPage">
- <div class="AccountPage__title">
-   <h1>my_page</h1>
- </div><br>
  
   <%# もしorderテーブルに保存されていたら %>
   <% if @user.order.present? %> 
     <div class='sold-out'>
-      <b>Cafe Ticket</b>
+      <div class="AccountPage__title">
+      <p>*** こちらのチケットをお店に提示してください ***</p>
+      </div>
+      <b><%= " Meets Cafe Ticket "%></b>
+      <%= "  for  " %><%= current_user.nickname %><%= "様" %>
+      <%= image_tag "ticket.jpg" %>
     </div>
   <% else %> 
-    <%= link_to 'Cafe Ticket を購入する', orders_path, method: :get%>
+    <%= " 月額５００円で カフェ巡りを楽しもう " %>
+    <div class="user">
+      <%= current_user.nickname %><%= " 様" %>
+    </div>
+    <%= link_to 'CafeTicket 購入はこちら！', orders_path, method: :get%>
   <% end %>
  
- <div class="Account__info">
-   <h2>ユーザー情報</h2>
- </div>
- <div class="AccountPage__form">
-   <%= form_for(current_user) do |f| %>
-     <div class="FormField">
-       <div class="FormField__name">
-         <%= f.label :name %>
-       </div>
-       <div class="FormField__name">
-         <%= f.text_field :nickname, autofocus: true %>
-       </div>
-     </div>
-     <div class="FormField">
-       <div class="FormField__email">
-         <%= f.label :email %>
-       </div>
-       <div class="FormField__email">
-         <%= f.email_field :email %>
-       </div>
-       <br>
-     </div>
-     <%= f.submit "更新する" %>
-     <br>
-   <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
-   <br>
-   <%= link_to "トップページへ戻る", root_path%>
-   <% end %>
- </div>
+    <div class="rink">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
+    </div>
+    <div class="rink">
+      <%= link_to "トップページへ戻る", root_path%>
+    </div>
 </div>
 
 

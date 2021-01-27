@@ -2,6 +2,44 @@
   display: flex;
 }
 
+.search{
+  font-size: large;
+}
+
+input[type="keyword"] {
+  width: 100px;
+  height: 20px;
+  border: solid 3px #C4C4C4;
+  margin-bottom: 10px;
+}
+
+/*----------
+  pl
+---------*/
+#bgi{
+  background-color: #D8E0DC;
+  height: 70px;
+  position: relative;
+  background-image: url(../images/pct53.png);
+  background-repeat: no-repeat;
+  background-size: 230px;
+  background-position: 50% 50%;
+}
+
+#bgi ul{
+  display: flex;
+  margin-left: 120px;
+  position: absolute;
+  top: 23px;
+}
+
+#bgi ul li{
+  margin-right: 20px;
+}
+
+#bgi ul li:first-child{
+  text-decoration: underline;
+}
 
 /*----------
   stores
