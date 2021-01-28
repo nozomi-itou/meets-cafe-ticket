@@ -190,7 +190,8 @@ header nav ul{
   About
 ---------*/
 #about{
-  background-image: url("pct05.png");
+  
+  background-image: url("app/assets/imagess/pct05.png");
   background-repeat: no-repeat;
   height: 689px;
   background-size: cover;
