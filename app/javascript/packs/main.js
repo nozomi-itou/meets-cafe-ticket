@@ -119,7 +119,7 @@ $('.nav-item>a').on('click',function(){
 
 // アニメーション
 $(window).on('load',function(){
-  var style = '<link rel="stylesheet" href="./CSS/animate.css">';
+  var style = '<link rel="stylesheet" href="/assets/animate.css">';
   $('head link:last').after(style);
 });
 
