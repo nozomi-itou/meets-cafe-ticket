@@ -9,7 +9,7 @@
 【 URL 】http://
 
 【 テスト用アカウント 】id・password
-- Basic認証　
+- Basic認証
 - user
 - owner
 
