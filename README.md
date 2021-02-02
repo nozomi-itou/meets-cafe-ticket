@@ -1,92 +1,59 @@
-# テーブル設計
+========== ========== ==========
 
-## users テーブル
+# Meets Cafe Ticket
 
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| email              | string     | null: false, unique: true      |
-| encrypted_password | string     | null: false                    |
-| nickname           | string     | null: false                    |
-| last_name          | string     | null: false                    |
-| first_name         | string     | null: false                    |
-| last_name_kana     | string     | null: false                    |
-| first_name_kana    | string     | null: false                    |
-| birthday           | date       | null: false                    |
-| gender_id          | integer    | null: false                    |
-| area_id            | integer    | null: false                    |
-| city               | string     | null: false                    |
-| address            | string     | null: false                    |
-| building_name      | string     |                                |
-| phone_number       | string     | null: false                    |
-| review             | references | foreign_key: true              |
+========== ========== ==========
 
-### Association
-- has_many :comments
-- has_one :order
+【 アプリケーション名 】 Meets Cafe Ticket
 
+【 URL 】http://
 
+【 テスト用アカウント 】id・password
+- Basic認証　
+- user
+- owner
 
-## owners テーブル
+---------- ----------
+## ◇ 概要 ◇
+	
+  このアプリケーションでは、月額500円でカフェ巡りを楽しむことができます。
 
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| email              | string  | null: false, unique: true |
-| encrypted_password | string  | null: false               |
-| last_name          | string  | null: false               |
-| first_name         | string  | null: false               |
-| last_name_kana     | string  | null: false               |
-| first_name_kana    | string  | null: false               |
-| birthday           | date    | null: false               |
-| post_code          | string  | null: false               |
-| area_id            | integer | null: false               |
-| city               | string  | null: false               |
-| address            | string  | null: false               |
-| building_name      | string  |                           |
-| phone_number       | string  | null: false               |
+## ◇ 利用方法 ◇
+	
+  ユーザーは、ログインをしてカフェチケットを購入します。
+  購入後に画面に表示されるチケットを店頭で提示することで、ワンドリンク無料のサービスを受けることができます。
+  またオーナーとしてログインすることで、加盟店としてSHOPを掲載することができます。
+  
+## ◇ 目指した課題解決 ◇
 
-### Association
-- has_many :shops
+  現在のコロナ禍で厳しい状況にある飲食店業界を応援したいと考えました。
+  ユーザーはお得にカフェを楽しむことができ、お店側は集客の増加が見込めます。
 
 
-## shops テーブル
-
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| shop_name   | string     | null: false                    |
-| address     | text       | null: false                    |
-| phone       | integer    | null: false                    |
-| open_close  | integer    | null: false                    |
-| drink       | integer    | null: false                    |
-| area_id     | integer    | null: false                    |
-| owner       | references | null: false, foreign_key: true |
-| review      | references | foreign_key: true              |
-
-### Association
-- belongs_to :owner
-- has_many :comments
+## ◇ 要件定義 ◇
 
 
+### [ログイン機能]
+
+ユーザー側と加盟店側でログインが分かれます。ユーザーは購入することができ、加盟店はSHOPを登録することができます。
+
+### [購入機能]
+
+PAY.JPを利用した購入機能の実装。購入ボタンをクリックするとDB及びPAY.JPサイトに購入情報が更新されます。
 
 
-## comments テーブル
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| title     | text       | null: false                    |
-| review    | text       | null: false                    |
-| user      | references | null: false, foreign_key: true |
-| shop      | references | null: false, foreign_key: true |
+### [加盟店登録機能]
 
-### Association
-- belongs_to :user
-- belongs_to :shop
+必要な情報を入力すると、加盟店として一覧表示させることができます。
+登録者は加盟店情報を編集・削除することができます。
 
+### [加盟店検索機能]
 
+キーワードを入力すると、加盟店を検索することができます。
 
-##  orders テーブル
+### [コメント機能]
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| user          | references | null: false, foreign_key: true |
+ユーザーはログインすると、加盟店に対してコメントすることができます。
+全ての人がコメントを閲覧できます。
 
-### Association
-- belongs_to :user
+----------
