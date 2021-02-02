@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
   resources :orders, only:[:index, :create]
+  resources :homes, only:[:index] 
+  resources :lps, only:[:index] 
 
   resources :shops do
     resources :comments, only:[:index, :create]

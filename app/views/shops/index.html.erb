@@ -16,17 +16,15 @@
 
     <!-----検索ここから----->
     <div class="search">
-      <p>SHOP SEARCH</p>
-        <%= form_with(url: search_shops_path, local: true, method: :get, class: "search-form") do |form| %>
-          <%= form.text_field :keyword, placeholder: "お店を検索する", class: "search-input" %>
-          <%= form.submit "検索", class: "search-btn" %>
-        <% end %>
+      <%= form_with(url: search_shops_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "お店を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
     </div>
     <!-----検索ここまで----->
 
     <!-----店舗リストここから----->
-    <div class="stores">
-      <div id="wrapper">
+
         <div id="store">
           <% @shops.each do |shop| %> <!-----投稿されたリスト----->
           <div class="store-list">
@@ -37,7 +35,7 @@
               <div class="store-name">
                 <h2><%= shop.shop_name %></h2>
                 <p><a href="https://goo.gl/maps/w6PcYZA7etQmQA2s5" target="_blank" rel="noopener noreferrer">MAP</a></p>
-                <p><%= link_to "レビュー", shop_path(shop.id), method: :get, class: "review" %></p>
+                <p id="review"><%= link_to "レビュー", shop_path(shop.id), method: :get, class: "review" %></p>
               </div>
               <div class="adress">
                 <p><%= shop.area.name%><%= shop.address %></p>
@@ -55,143 +53,9 @@
             </div>
           </div>
           <%end%><!-----店舗リスト１end----->
-        
-          <div class="store-list">
-            <div class="store-pct">
-              <%= image_tag "pct30.jpg", class:"shop-icon" %>
-            </div>
-            <div class="information">
-              <div class="store-name">
-                <h2><a href="#">KIMINO珈琲 渋谷店</a></h2>
-                <p><a href="https://goo.gl/maps/8RGs8eNYosRFGBcx9" target="_blank" rel="noopener noreferrer">MAP</a></p>
-              </div>
-              <div class="adress">
-                <p>東京都渋谷区神南1丁目7-3</p>
-                <ul>
-                  <li>電話 : 03-5315-48××</li>
-                  <li>営業時間：7時〜22時</li>
-                </ul>
-              </div>
-              <div class="menu">
-                <h3>選べるワンドリンクサービス</h3>
-                <ul>
-                  <li>ブレンドコーヒー</li>
-                  <li>エソプレッソコーヒー</li>
-                  <li>カプチーノ</li>
-                  <li>ロイヤルミルクティー</li>
-                  <li>タピオカミルクティー</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="store-list">
-            <div class="store-pct">
-              <%= image_tag "pct31.jpg", class:"shop-icon" %>
-            </div>
-            <div class="information">
-              <div class="store-name">
-                <h2><a href="#">Happiness Cafe 銀座店</a></h2>
-                <p><a href="https://goo.gl/maps/TdpUh4NZ3GDaeU9g6" target="_blank" rel="noopener noreferrer">MAP</a></p>
-              </div>
-              <div class="adress">
-                <p>東京都中央区銀座5丁目1−1</p>
-                <ul>
-                  <li>電話 : 03-5315-48××</li>
-                  <li>営業時間：7時〜23時</li>
-                </ul>
-              </div>
-              <div class="menu">
-                <h3>選べるワンドリンクサービス</h3>
-                <ul>
-                  <li>ブレンドコーヒー</li>
-                  <li>アメリカンコーヒー</li>
-                  <li>エスプレッソコーヒー</li>
-                  <li>豆乳ラテ</li>
-                  <li>カプチーノ</li>
-                  <li>アイスルイボスティー</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="store-list">
-            <div class="store-pct">
-              <%= image_tag "pct32.jpg", class:"shop-icon" %>
-            </div>
-            <div class="information">
-              <div class="store-name">
-                <h2><a href="#">Long Moon Coffee 六本木駅前店</a></h2>
-                <p><a href="https://goo.gl/maps/pPNF9maxQYkp6cWP9" target="_blank" rel="noopener noreferrer">MAP</a></p>
-              </div>
-              <div class="adress">
-                <p>東京都港区六本木7丁目17-8</p>
-                <ul>
-                  <li>電話 : 03-5315-48××</li>
-                  <li>営業時間：7時〜23時</li>
-                </ul>
-              </div>
-              <div class="menu">
-                <h3>選べるワンドリンクサービス</h3>
-                <ul>
-                  <li>オリジナルブレンド</li>
-                  <li>エスプレッソコーヒー</li>
-                  <li>カプチーノ</li>
-                  <li>アイスティー</li>
-                  <li>アイスココア</li>
-                  <li>青森県産りんごジュース</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-----店舗リスト固定----->
-          <div class="store-list">
-            <div class="store-pct">
-              <%= image_tag "pct33.jpg", class:"shop-icon" %>
-            </div>
-            <div class="information">
-              <div class="store-name">
-                <h2><a href="#">～cafe&bar～くれのあ 西新宿店</a></h2>
-                <p><a href="https://goo.gl/maps/S2EmfRrbvZNuQxR36" target="_blank" rel="noopener noreferrer">MAP</a></p>
-              </div>
-              <div class="adress">
-                <p>東京都新宿区西新宿2丁目11</p>
-                <ul>
-                  <li>電話 : 03-5315-48××</li>
-                  <li>営業時間：11時〜23時30分</li>
-                </ul>
-              </div>
-              <div class="menu">
-                <h3>選べるワンドリンクサービス</h3>
-                <ul>
-                  <li>アメリカンコーヒー</li>
-                  <li>ブレンドコーヒー</li>
-                  <li>プレミアムアイスティー</li>
-                  <li>32種の野菜ジュース</li>
-                  <li>季節の果実スムージー</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-----店舗リスト固定----->
         </div>
-      </div>
-    </div>
-    <!-----店舗リストここまで----->
 
-    <!-----ページ数ここから----->
-    <section id="page">
-      <div>
-        <ul>
-          <li class="here">1</li>
-          <a href="#"><li>2</li></a>
-          <a href="#"><li>3</li></a>
-          <p id="between">.....</p>
-          <a href="#"><li>8</li></a>
-          <a href="#"><li>次へ</li></a>
-        </ul>
-      </div>
-    </section>
-    <!-----ページ数ここまで----->
+    <!-----店舗リストここまで----->
   </main>
   <!-----メインここまで----->
 </div>

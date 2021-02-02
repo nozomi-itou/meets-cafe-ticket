@@ -8,9 +8,41 @@
   <%= current_owner.last_name %><%= " " %><%= current_owner.first_name %><%= " 様" %>
 </div>
 
-<div class="new_shop">
+<div class="edit_shop">
   <%= link_to " Shopを登録する", new_shop_path, method: :get%>
 </div>
+
+
+  <div class="new_shop">
+    <div id="store">
+      <% @shops.each do |shop| %> <!-----投稿されたリスト----->
+      <div class="store-list">
+        <div class="store-pct">
+          <%= image_tag shop.image ,class:"shop-img" %>
+        </div>
+        <div class="information">
+          <div class="store-name">
+            <h2><%= shop.shop_name %></h2>
+            <p id="edit"><%= link_to "編集する", shop_path(shop.id), method: :get, class: "edit" %></p>
+          </div>
+          <div class="adress">
+            <p><%= shop.area.name%><%= shop.address %></p>
+            <ul>
+              <li>TEL：<%= shop.phone %></li>
+              <li>営業時間：<%= shop.open_close %></li>
+            </ul>
+          </div>
+          <div class="menu">
+            <h3>選べるワンドリンクサービス</h3>
+            <ol>
+              <li><%= shop.drink %></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <%end%>
+  </div>
+
 
 <div class="rink">
   <%= link_to "ログアウト", destroy_owner_session_path, method: :delete%>

@@ -1,0 +1,88 @@
+<div id="wwrapper" class="fadeIn">
+  <div>
+    <%= image_tag "pct35.png", class:"mono" %>
+  </div>
+
+
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="shops-title">ショップの情報を入力</h2>
+    <%= form_with(model: @shop, local: true) do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        ショップ画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"image" %>
+      </div>
+    </div>
+    <%# /画像 %>
+    <%# 店名と住所 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        店名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :shop_name, class:"shop-text", id:"nano", placeholder:"店名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          住所
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"nanoa"}) %>
+      </div>
+    </div>
+        <%= f.text_area :address, class:"shop-text", id:"nano", placeholder:"〇〇市杜王町１丁目 岸辺ビル１F" ,rows:"7" ,maxlength:"100" %>
+      </div>
+    </div>
+    <%# /店名と住所 %>
+
+    <%# 電話番号と営業時間 %>
+    <div class="phone">
+      <div class="weight-bold-text">
+        電話
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :phone, class:"shop-phone", id:"nano", placeholder:"03-1234-XXXX（半角・ハイフンを含む)", maxlength:"13" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          営業時間
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :open_close, class:"open_close", id:"nano", placeholder:"7〜23時" ,rows:"7" ,maxlength:"40" %>
+      </div>
+    </div>
+    <%# /電話番号と営業時間 %>
+
+    <%# 選べるドリンク %>
+    <div class="drink">
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          選べるドリンク(2種以上)
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :drink, class:"drink", id:"nano", placeholder:"・ブレンド  ・エスプレッソ  ・ソイラテ",rows:"7" ,maxlength:"40" %>
+      </div>
+    </div>
+    <%# /選べるドリンク %>
+
+    <%# 下部ボタン %>
+    <div id="sell-btn-contents">
+      <%= f.submit "内容を変更する" ,class:"sell-btn" %>
+    </div>
+    <div class="sell-btn-contents">
+      <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+
+</div>

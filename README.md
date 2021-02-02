@@ -57,7 +57,6 @@
 | phone       | integer    | null: false                    |
 | open_close  | integer    | null: false                    |
 | drink       | integer    | null: false                    |
-| category_id | integer    | null: false                    |
 | area_id     | integer    | null: false                    |
 | owner       | references | null: false, foreign_key: true |
 | review      | references | foreign_key: true              |

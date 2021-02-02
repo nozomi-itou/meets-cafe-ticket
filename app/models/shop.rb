@@ -2,8 +2,8 @@ class Shop < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area
   belongs_to :owner
-  has_many :comments
-  has_one_attached :image
+  has_many :comments, dependent: :destroy
+  has_one_attached :image, dependent: :destroy
 
   with_options presence: true do
     validates :shop_name 

@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <section id="fv">
   <div class="loop_wrap">
-    <%= image_tag "pctFV.jpg" %>
+    <%= image_tag "pctFV.jpg" %><%= image_tag "pctFV.jpg" %>
   </div>
   <p id="main-copy">月額500円でカフェ巡りをしよう</p>
   <div id="fixed-button">
@@ -10,10 +10,10 @@
     <% if user_signed_in?%>
       <p id="pcb"><%= link_to "CafeTicketは" " こちら >>", my_page_path, class: "ticket" %></p>
     <% elsif owner_signed_in? %>
-      <p id="pcb"><%= link_to "🏡MyShopは" " こちら >>", shop_page_path, class: "ticket" %></p>
+      <p id="pcb"><%= link_to "MyShopは" " こちら >> 🏡", shop_page_path, class: "ticket" %></p>
     <% end %>
   <%else%>
-    <p id="pcb"><%= link_to " 会員登録は☕️"" こちら >>", new_user_registration_path, class: "ticket" %></p>
+    <p id="pcb"><%= link_to " 会員登録は""こちら >>", new_user_registration_path, class: "ticket" %></p>
   <%end%>
   </div>
 </section>
@@ -33,7 +33,7 @@
     <p>↓↓今だけ入会特典付き↓↓</p>
   </div>
   <div id="LP-button" class="effect-fade">
-    <a href="LP/index.html"><p>詳しくはこちら</p></a>
+    <p><%= link_to "詳しくはこちら", lps_path%></p>
   </div>
 </section>
 <!-----ABOUTここまで----->
@@ -98,7 +98,7 @@
     <p>新着情報</p>
   </div>
   <div id="news-wrapper">
-    <a href="./stores/index.html">
+    <a href="/shops">
       <div class="article">
         <div class="photo">
           <%= image_tag "pct27.jpg", class: 'hoge'%>
@@ -109,7 +109,7 @@
         </div>
       </div>
     </a>
-    <a href="./LP/index.html#section5">
+    <a href="../lps">
       <div class="article">
         <div class="photo">
           <%= image_tag "pct28.png" , class: 'hog'%>

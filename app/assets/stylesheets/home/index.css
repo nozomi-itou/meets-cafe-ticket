@@ -15,106 +15,10 @@ body{
 
 a {
   color: #555555;
-  text-decoration: none;
 }
 
 
-/*----------
-  header
----------*/
 
-#logo{
-  width: 290px;
-  margin: 0 auto 0 42%;
-}
-
-#logo img{
-  height: 100px;
-  margin: 0 auto;
-  padding-top: 22px;
-}
-
-#login{
-  display: flex;
-}
-
-#login p a:hover{
-  opacity: 0.6;
-  transition: 0.5s;
-}
-
-#login p a{
-  background-color: #5B3E24;
-  color: #fff;
-  padding: 5px 10px 5px 10px;
-  display: block;
-  margin-right: 30px;
-  margin-top: 65px;
-  font-size: 1.6rem;
-  width: 88px;
-  text-align: center;
-}
-#sss p a{
-  background-color: #5B3E24;
-  color: #fff;
-  padding: 5px 10px 5px 10px;
-  display: block;
-  margin-right: 30px;
-  margin-top: 65px;
-  font-size: 1.6rem;
-  width: 30px;
-  text-align: center;
-}
-
-
-#logo-wrappper{
-  display: flex;
-  border-top: solid 11px #5B3E24;
-}
-
-header nav ul li{
-  padding: 5px 75px;
-  border-left: solid 1px #B77B7B;
-  list-style: none;
-}
-
-header nav ul:last-of-type{
-  border-right: solid 1px #B77B7B;
-}
-
-header nav ul{
-  display: flex;
-  margin: 0 auto;
-  width: 1185px;
-}
-
-#nav{
-  padding: 15px 0 10px 0;
-  border-top: solid 1px #B77B7B;
-  border-bottom: solid 1px #B77B7B;
-  margin-top: -10px;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.20);
-}
-
-#nav a:hover{
-  color: #B77B7B;
-  transition: 0.5s;
-}
-
-
-.is-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  background-color: #fff;
-}
-
-.btn_trigger,.nav-wrapper,#menu{
-  display: none;
-}
 
 /*----------
   first-view
@@ -167,6 +71,13 @@ header nav ul{
   position: fixed;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
+}
+
+#pcb{
+  width: 100px;
+  position: absolute;
+  bottom: 27%;
+  right: 13%;
 }
 
 #fixed-button a{
@@ -267,6 +178,17 @@ header nav ul{
   transition: 1s;
 }
 
+.effect-fade {
+  opacity : 0;
+  transform : translate(0, 20px);
+  transition : all 1s;
+}
+
+
+.effect-fade.effect-scroll {
+  opacity : 1;
+  transform : translate(0, 0);
+}
 
 
 
@@ -367,9 +289,6 @@ header nav ul{
   transform: translate(15px,0);
   transition: 1s;
 }
-
-
-
 
 
 

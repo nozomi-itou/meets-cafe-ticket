@@ -47,11 +47,12 @@
   <div id="nav">
     <nav>
       <ul>
-        <li><a href="#about">サービス内容</a></li>
-        <li><a href="#gallery">加盟店</a></li>
-        <li><a href="./contact/index.html">加盟店募集中</a></li>
-        <li><a href="#news">新着情報</a></li>
-        <li><a href="#faq">よくある質問</a></li>
+        <li><%= link_to '詳 細', root_path(anchor: 'about'), class: 'nav-item itemA' %></li>
+
+        <li><%= link_to '加盟店', shops_path(@shops), method: :get, class: 'nav-item itemB' %></li>
+        <li><%= link_to 'サービス内容',lps_path, class: 'nav-item itemB' %></li>
+        <li><%= link_to '新着情報', root_path(anchor: 'news'), class: 'nav-item itemA' %></li>
+        <li><%= link_to 'よくある質問', root_path(anchor: 'faq'), class: 'nav-item itemB' %></li>
       </ul>
     </nav>
   </div>

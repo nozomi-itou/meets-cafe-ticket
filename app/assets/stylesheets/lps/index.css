@@ -1,0 +1,141 @@
+
+/*----------
+  kv
+---------*/
+#kv{
+  position: relative;
+  padding-top: 40px;
+}
+
+#kv img{
+  width: 100vw;
+}
+
+
+#kv h1 img{
+  width: 302px;
+  position: absolute;
+  top: 12%;
+  left: 1%;
+  }
+
+  #section1 img{
+    width: 100vw;
+  }
+
+/*----------
+  section2
+---------*/
+#section2 p{
+  display: block;
+  width: 428px;
+  text-align: center;
+  font-size: 2.8rem;
+  line-height: 75px;
+  letter-spacing: 0.3rem;
+  background-color: #846A52;
+  color: #fff;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: -75px;
+  margin-bottom: 70px;
+  box-shadow: 0 3px 0 rgba(95, 76, 59, 1);
+  position: relative;
+}
+#section2 p:hover {
+  top: -5px;
+  box-shadow: 0 9px 0 rgba(95, 76, 59, 1);
+}
+#section2 p:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+#section2 p span{
+  font-size: 24px;
+}
+
+#section2 img{
+  width: 100vw;
+}
+
+#section3 img{
+  width: 100vw;
+}
+
+/*----------
+  section4
+---------*/
+#section4 p{
+  display: block;
+  width: 236px;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 43px;
+  letter-spacing: 0.1rem;
+  background-color: #846A52;
+  color: #fff;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: -130px;
+  margin-bottom: 80px;
+  box-shadow: 0 3px 0 rgba(95, 76, 59, 1);
+  position: relative;
+}
+#section4 p:hover {
+  top: -4px;
+  box-shadow: 0 7px 0 rgba(95, 76, 59, 1);
+}
+#section4 p:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+#section4 p span{
+  font-size: 16px;
+}
+
+#section4 img{
+  width: 100vw;
+}
+
+
+/*----------
+  section5
+---------*/
+#section5{
+  border-bottom: solid 11px #5B3E24;
+}
+
+#section5 p{
+  display: block;
+  width: 428px;
+  text-align: center;
+  font-size: 2.8rem;
+  line-height: 70px;
+  letter-spacing: 0.3rem;
+  background-color: #80B3D8;
+  color: #fff;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: -135px;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 0 #4B7FA5;
+  position: relative;
+}
+#section5 p:hover {
+  top: -5px;
+  box-shadow: 0 9px 0 #4B7FA5;
+}
+#section5 p:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+#section5 p span{
+  font-size: 20px;
+}
+
+.pcimg{
+  width: 100vw;
+}

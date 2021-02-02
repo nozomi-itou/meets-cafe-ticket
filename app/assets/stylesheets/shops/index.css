@@ -4,13 +4,27 @@
 
 .search{
   font-size: large;
+  display: block;
+  width: 100vw;
 }
 
-input[type="keyword"] {
-  width: 100px;
-  height: 20px;
+form.search-form{
+  margin: 30px auto;
+  display: block;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 500px;
+  height: 30px;
   border: solid 3px #C4C4C4;
-  margin-bottom: 10px;
+  margin: 0 auto;
+
+}
+
+#shopss{
+  margin: 0 auto;
+  width: 100vw;
 }
 
 /*----------
@@ -20,10 +34,12 @@ input[type="keyword"] {
   background-color: #D8E0DC;
   height: 70px;
   position: relative;
-  background-image: url(../images/pct53.png);
+  background-image: url("/assets/pct53.png");
   background-repeat: no-repeat;
-  background-size: 230px;
+  background-size: cover;
   background-position: 50% 50%;
+  margin: 0 auto;
+  width: 100vw;
 }
 
 #bgi ul{
@@ -48,11 +64,8 @@ input[type="keyword"] {
   display: none;
 }
 
-#wrapper{
+#store{
   margin: 0 auto;
-  width: 1205px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .store-pct img{
@@ -63,6 +76,7 @@ input[type="keyword"] {
   display: flex;
   margin-top: 60px;
   width: 937px;
+  margin: 0 auto;
 }
 
 .store-name{
@@ -82,12 +96,16 @@ h2 a:hover{
 
 .store-name p{
   line-height: 30px;
-  margin-left: 40px;
+  margin: 0 0 0 40px;
   display: inline-block;
   background-color: #C8D0CC;
   padding: 0px 8px;
   height: 30px;
   font-weight: bold;
+}
+
+#review{
+  margin-left: 25px;
 }
 
 .store-name p:hover{
@@ -109,7 +127,7 @@ h2 a:hover{
 }
 
 h3{
-  background-image: url(../images/pct39.png);
+  background-image: url("/assets/pct39.png");
   background-size: 18px;
   background-repeat: no-repeat;
   background-position: 2px 2px;
@@ -136,9 +154,10 @@ h3{
   margin-top: 5px;
 }
 
-.menu ul li{
-margin-right: 34px;
-margin-top: 5px;
+.menu ol li{
+  margin-right: 34px;
+  margin-top: 5px;
+  padding: 18px;
 }
 
 .information{
