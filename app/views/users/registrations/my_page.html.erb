@@ -8,18 +8,24 @@
   <% if @user.order.present? %> 
     <div class='sold-out'>
       <div class="AccountPage__title">
-      <p>*** こちらのチケットをお店に提示してください ***</p>
+        <p>  *** こちらのチケットをお店に提示してください ***</p>
+        <%= image_tag "ticket.jpg" %>
       </div>
-      <b><%= " Meets Cafe Ticket "%></b>
-      <%= "  for  " %><%= current_user.nickname %><%= "様" %>
-      <%= image_tag "ticket.jpg" %>
+      <div class="niji">
+        <b><%= " Meets Cafe Ticket "%></b>
+        <%= "  for  " %><%= current_user.nickname %><%= "様" %>
+
+      </div>
+      
     </div>
   <% else %> 
     <%= " 月額５００円で カフェ巡りを楽しもう " %>
     <div class="user">
       <%= current_user.nickname %><%= " 様" %>
     </div>
-    <%= link_to 'CafeTicket 購入はこちら！', orders_path, method: :get%>
+    <div class="kochira">
+      <%= link_to 'CafeTicket 購入はこちら！', orders_path, method: :get%>
+    </div>
   <% end %>
  
     <div class="rink">

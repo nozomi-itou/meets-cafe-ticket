@@ -2,7 +2,7 @@
 <div id="logo">
   <%= link_to image_tag("pct1.png", class:"cafe-icon"), "/" %>
 </div>
-</div><p>＜SHOP SEARCH＞＞</p>
+</div>
   <%= form_with(url: search_shops_path, local: true, method: :get, class: "search-form") do |form| %>
     <%= form.text_field :keyword, placeholder: "ショップを検索する", class: "search-input" %>
     <%= form.submit "検索", class: "search-btn" %>

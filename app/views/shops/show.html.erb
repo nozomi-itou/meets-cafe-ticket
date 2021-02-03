@@ -34,13 +34,13 @@
 </div>
 
 
-<h1>コメントを投稿してみよう！</h1>
-
 <div class="container">
   <% if user_signed_in? %>
     <%= form_with(model: [@shop, @comment], local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-      <%= form.submit "送信する" %>
+      <%= form.text_area :text, placeholder: "コメントを投稿してみよう！", rows: "2" %>
+      <div>
+        <%= form.submit "送信する" %>
+      </div>
     <% end %>
   <% else %>
     <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
@@ -48,11 +48,10 @@
   <div class="comments">
       <h4>＜REVIEWS＞</h4>
       <% @comments.each do |comment| %>
-        <p>
-          <strong><%= comment.user.nickname %>：</strong>
-          <%= comment.text %>
-        </p>
-        <p>[<%= comment.created_at %>]</p>
+          <div class="kome">
+            <%= comment.user.nickname %>：
+            <%= comment.text %></div>
+          <div class="come">[<%= comment.created_at %>]</div>
       <% end %>
       <% if @comments.length == 0 %>
       <p>・・・コメントはまだありません・・・</p>

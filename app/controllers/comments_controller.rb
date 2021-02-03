@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to shops_path(@comment.shop)
+      redirect_to shop_path(@comment.shop)
     end
   end
 

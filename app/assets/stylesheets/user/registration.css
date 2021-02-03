@@ -226,3 +226,23 @@
   cursor: pointer;
 }
 
+.kochira {
+  padding: 20px;
+  font-size: 20px;
+  background-color: #dda3a367;
+  text-align: center;
+}
+
+.AccountPage__title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.niji{
+  text-align: center;
+}
+
+.rink{
+  margin: 30px;
+  text-align: center;
+}

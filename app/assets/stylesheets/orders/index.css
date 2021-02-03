@@ -1,0 +1,14 @@
+.joho{
+  padding: 20px;
+}
+
+#cards{
+  width: 50vw;
+  height: 100vh;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-wrap {
+  justify-content: center;
+}
