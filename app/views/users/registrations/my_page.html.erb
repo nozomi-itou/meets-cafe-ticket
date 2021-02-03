@@ -19,12 +19,14 @@
       
     </div>
   <% else %> 
-    <%= " 月額５００円で カフェ巡りを楽しもう " %>
-    <div class="user">
-      <%= current_user.nickname %><%= " 様" %>
-    </div>
-    <div class="kochira">
-      <%= link_to 'CafeTicket 購入はこちら！', orders_path, method: :get%>
+    <div class="AccountPage__title">
+      <div class="user">
+        <p><%= "ようこそ  " %><%= current_user.nickname %><%= " 様" %></p>
+        <%= " 月額５００円で カフェ巡りを楽し見ましょう！ " %>
+      </div>
+      <div class="kochira">
+        <%= link_to 'CafeTicket 購入はこちら！', orders_path, method: :get%>
+      </div>
     </div>
   <% end %>
  
