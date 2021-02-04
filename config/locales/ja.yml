@@ -1,0 +1,41 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       last_name: 苗字
+       first_name: 名前
+       last_name_kana: 苗字(カナ)
+       first_name_kana: 名前(カナ)
+       birthday: 生年月日
+       image: 画像
+       area_id: 都道府県
+       city: 市町村
+       address: 番地
+       phone_number: 電話番号
+       gender_id: 性別
+     owner:
+       last_name: 苗字
+       first_name: 名前
+       last_name_kana: 苗字(カナ)
+       first_name_kana: 名前(カナ)
+       birthday: 生年月日
+       image: 画像
+       area_id: 都道府県
+       city: 市町村
+       address: 番地
+       phone_number: 電話番号
+       gender_id: 性別
+       email: メールアドレス
+       password: パスワード
+       encrypted_password: パスワード(確認用)
+       post_code: 郵便番号
+     shop:
+       shop_name: 店名
+       address: 住所
+       phone: 電話番号
+       open_close: 営業時間
+       drink: 選べるドリンク(2種以上)
+       image: 画像
+       area_id: 都道府県
+  
