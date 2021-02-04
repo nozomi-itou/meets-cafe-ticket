@@ -6,12 +6,12 @@
 
 【 アプリケーション名 】 Meets Cafe Ticket
 
-【 URL 】http://
+【 URL 】https://meets-cafe-ticket-32970.herokuapp.com/
 
-【 テスト用アカウント 】id・password
-- Basic認証
-- user
-- owner
+【 テスト用アカウント 】
+- Basic認証  ユーザー名：admin  パスワード：2222
+- user  アドレス：text@example.com  パスワード：1111a
+- owner  アドレス：pink@example.com  パスワード：1111a
 
 ---------- ----------
 ## ◇ 概要 ◇
