@@ -144,10 +144,33 @@
     <a href="#" id="tw"><p>Twitterで登録</p></a>
     <p id="privacy"><a href="#">利用規約</a>と<a href="#">個人情報保護方針</a>に<br>
       同意の上ご利用ください。</p>
-
     <div id="sign-up">
       <p><%= link_to 'ログインはこちら', new_user_session_path, class: "login" %></p>
     </div>
   </div>
-<% end %>
+
+
+<div class="fg">
+  <%= button_to "Facebookで登録", user_facebook_omniauth_authorize_path, :method => :post%>
+  <%= button_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, :method => :post %>
+</div>
+
+ <%if @sns_id.present? %>
+   <%= hidden_field_tag :sns_auth, true %>
+ <% else %>
+   <div class="field">
+     <%= f.label :password %>
+     <% @minimum_password_length %>
+     <em>(<%= @minimum_password_length %> characters minimum)</em>
+     <br />
+     <%= f.password_field :password, autocomplete: "new-password" %>
+   </div>
+
+   <div class="field">
+     <%= f.label :password_confirmation %><br />
+     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+   </div>
+ <% end %>
+
+ <% end %>
 </div>

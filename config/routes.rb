@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   }
 
   devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations',
     sessions: 'users/sessions',
-    passwords: 'users/passwords',
-    registrations: 'users/registrations'
+    passwords: 'users/passwords'
   }
   devise_scope :user do   # マイページへ遷移
     get 'my_page' => 'users/registrations#my_page'
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
     get '/owners/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:new, :edit, :update]
   resources :orders, only:[:index, :create]
   resources :homes, only:[:index] 
   resources :lps, only:[:index] 

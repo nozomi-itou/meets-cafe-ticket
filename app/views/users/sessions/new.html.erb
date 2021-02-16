@@ -18,9 +18,15 @@
           <%= f.submit "ログイン" %>
         </div>
       </div>
-      <a href="#" id="fb"><p>Facebookでログイン</p></a>
-      <a href="#" id="gg"><p>Googleでログイン</p></a>
+
       <a href="#" id="tw"><p>Twitterでログイン</p></a>
+
+      <div id="fb">
+        <%= button_to "Facebookでログイン", user_facebook_omniauth_authorize_path, :method => :post%>
+      </div>
+      <div id="gg">
+        <%= button_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, :method => :post %>
+      </div>
 
       <div id="sign-up">
         <p><%= link_to '新規登録の方はこちら', new_user_registration_path, class: "login" %></p>
