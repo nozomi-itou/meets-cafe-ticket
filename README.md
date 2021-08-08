@@ -6,7 +6,7 @@
 
 【 アプリケーション名 】 Meets Cafe Ticket
 
-【 URL 】https://meets-cafe-ticket-32970.herokuapp.com/
+
 
 【 テスト用アカウント 】
 - Basic認証  ユーザー名：admin  パスワード：2222
